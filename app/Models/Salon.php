@@ -12,5 +12,11 @@ class Salon extends Model
         'address',
         'qr_code'
     ];
+
+    public function services()
+    {
+        return $this->hasMany(Service::class);
+    }
 }
+
 

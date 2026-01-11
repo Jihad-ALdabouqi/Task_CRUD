@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\SalonController;
 use App\Http\Controllers\SalonResourceController;
+use App\Http\Controllers\ServiceController;
 
 
 Route::get('/salons', [SalonController::class, 'index'])->name('salons.index');
@@ -14,3 +15,6 @@ Route::put('/salons/{id}', [SalonController::class, 'update'])->name('salons.upd
 Route::delete('/salons/{id}', [SalonController::class, 'destroy'])->name('salons.destroy');
 
 Route::resource('salons-resource', SalonResourceController::class);
+
+Route::resource('services', ServiceController::class);
+
